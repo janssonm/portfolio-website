@@ -1,0 +1,26 @@
+body {
+    background-image: url(../imgs/Dreamers\ Welcome.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    font-size: 16pt;
+}
+
+button {
+    font-family: "neue-haas-grotesk-display",'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+    font-size: 18pt;
+    color: #222222;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+button:hover {
+    
+}
+

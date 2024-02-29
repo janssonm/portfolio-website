@@ -1,0 +1,68 @@
+.frontPage {
+    margin: 60px;
+    height: calc(100vh - 120px);
+    width: calc(100vw - 120px);
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    ". . ."
+    "greet greet list";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.headerDiv {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+    "line line line"
+    "text1 . text2";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content auto;
+}
+
+.line {
+    grid-area: line;
+    background: black;
+    height: 2px;
+}
+
+.headerText1 {
+    grid-area: text1;
+    height: fit-content;
+}
+
+.headerText2 {
+    grid-area: text2;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+
+.listDiv {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: center;
+    margin: 0;
+    height: 5.1cm;
+
+}
+
+.greetDiv {
+    grid-area: greet;
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+}
+
+.greeting {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 72pt;
+    margin: 0;
+}
