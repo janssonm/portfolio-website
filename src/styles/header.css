@@ -1,0 +1,34 @@
+.headerDiv {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+    "line line line"
+    "text1 . text2";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content auto;
+    z-index: 1000;
+    padding: 40px 40px 0 40px;
+}
+
+p {
+    font-size: 12pt;
+}
+
+.line {
+    grid-area: line;
+    background: black;
+    height: 2px;
+    margin-bottom: 10px;
+}
+
+.headerText1 {
+    grid-area: text1;
+    height: fit-content;
+}
+
+.headerText2 {
+    grid-area: text2;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}

@@ -1,19 +1,31 @@
-import './styles/frontpage.css';
+import '../styles/frontpage.css';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import Lenis from '@studio-freight/lenis'
+
+let tl = gsap.timeline()
+
+tl.to('.animated-element', {
+    x: 800
+})
+// Smooth scroll
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
 
 function FrontPage() {
     return(
         <div className='frontPage'>      
-            <div className='headerDiv'>
-                <div className='line'></div>
-                <div className='headerText1'>
-                    <p>Media Technology @ KTH<br></br>Intern @ Skry</p>
-                </div>
-                <div className='headerText2'>
-                    <p>Stockholm</p>
-                    <p>Say hi</p>z
-                </div>
-        
-            </div>
       
             <div className="greetDiv">
                 <p className='greeting'>
@@ -39,7 +51,7 @@ function FrontPage() {
                 </button>
 
                 <button>
-                    5 {"\xa0"} Contact
+                    05 {"\xa0"} Contact
                 </button>
             </div>
         </div>

@@ -1,10 +1,11 @@
 @import url("https://use.typekit.net/mxr0oaz.css");
 
 body {
-  margin: 0;
   font-family: "neue-haas-grotesk-display",'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
   color: #222222;
+  margin: 0;
+  padding: 0;
 }
 
 code {

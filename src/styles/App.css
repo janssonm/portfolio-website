@@ -1,12 +1,11 @@
 body {
     background-image: url(../imgs/Dreamers\ Welcome.png);
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vw 100vh;
 }
-
 p {
     font-size: 16pt;
+    margin: 0;
 }
 
 button {
@@ -23,4 +22,22 @@ button {
 button:hover {
     
 }
+
+.header{
+    position: fixed;
+    height: 100px;
+    width: 100vw;
+}
+
+.page {
+    position: relative;
+    width: 100vw;
+    top: 100px;
+    overflow-y: scroll;
+    height: calc(100vh - 100px);
+}
+
+.page::-webkit-scrollbar {
+    display: none;
+  }
 
