@@ -6,11 +6,10 @@
     "text1 . text2";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: min-content auto;
-    z-index: 1000;
-    padding: 40px 40px 0 40px;
+
 }
 
-p {
+.headerDiv p {
     font-size: 12pt;
 }
 
@@ -31,4 +30,8 @@ p {
     display: flex;
     justify-content: space-between;
     height: fit-content;
+}
+
+.sayhi {
+    font-size: 12pt;
 }

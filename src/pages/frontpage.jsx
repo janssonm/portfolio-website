@@ -1,31 +1,31 @@
 import '../styles/frontpage.css';
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import Lenis from '@studio-freight/lenis'
+import { useRef } from "react";
 
-let tl = gsap.timeline()
+function FrontPage({ eduRef, expRef, projectRef, otherRef, contactRef, scrolldiv5 }) {
 
-tl.to('.animated-element', {
-    x: 800
-})
-// Smooth scroll
-const lenis = new Lenis()
+    function scrolldiv() {
+        if (eduRef && eduRef.current) {
+            eduRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+    function scrolldiv2() {
+        if (expRef && expRef.current) {
+            expRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+    function scrolldiv3() {
+        if (projectRef && projectRef.current) {
+            projectRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+    function scrolldiv4() {
+        if (otherRef && otherRef.current) {
+            otherRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }
 
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
-
-function FrontPage() {
     return(
-        <div className='frontPage'>      
+        <div className='frontPage'>
       
             <div className="greetDiv">
                 <p className='greeting'>
@@ -34,23 +34,23 @@ function FrontPage() {
             </div>
 
             <div className='listDiv'>
-                <button>
+                <button onClick={scrolldiv}>
                     01 {"\xa0"} Education
                 </button>
 
-                <button>
+                <button onClick={scrolldiv2}>
                     02 {"\xa0"} Experience
                 </button>
 
-                <button>
-                    03 {"\xa0"} Projects & Skills
+                <button onClick={scrolldiv3}>
+                    03 {"\xa0"} Courses, skills & projects
                 </button>
 
-                <button>
+                <button onClick={scrolldiv4}>
                     04 {"\xa0"} Other
                 </button>
 
-                <button>
+                <button onClick={scrolldiv5}>
                     05 {"\xa0"} Contact
                 </button>
             </div>

@@ -1,13 +1,15 @@
+
+
 .frontPage {
-    height: calc(100vh - 100px);
-    width: calc(100vw - 80px);
     display: grid;
     grid-template-areas: 
     ". . ."
     "greet greet list";
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 40px;
+    padding-bottom: 40px;
+    height: calc(100vh - 140px);
+
 }
 
 .listDiv {
