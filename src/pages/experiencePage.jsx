@@ -8,13 +8,18 @@ const ExperiencePage = React.forwardRef((props, ref) => {
             <div className='items'>
                 <div className='item'>
                     <h2>Skry</h2>
-                    <h3>Internship</h3>
+                    <h3>Internship, fullstack</h3>
                     <h4>Internship as part of the course DM1998 at KTH
                         during spring 2024. Developing web applications
                         using mainly JavaScript with Vue.js as
                         framework for the front-end and Ruby using
-                        Ruby on Rails as framework for the back-end. <br/>
-                        2020 -</h4>
+                        Ruby on Rails as framework for the back-end. <br/></h4>
+                        <h4>Jan. 2024 -</h4>
+                </div>
+                <div className='item'>
+                    <h2>Quarnevalen, KTH</h2>
+                    <h3>Graphic designer</h3>
+                    <h4>Feb. 2023- May 2023</h4>
                 </div>
                 <div className='item'>
                     <h2>The Board of Communication,

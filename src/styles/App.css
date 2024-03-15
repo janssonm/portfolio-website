@@ -12,6 +12,7 @@ body {
 h1, h2, h3, h4, p {
     margin: 0;
     color: #222222;
+    padding-bottom: 10px;
 }
 
 button {
@@ -78,9 +79,12 @@ a {
 
 .items {
     display: flex;
+    columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
 }
 
 .item {
+    padding-bottom: 60px;
     padding-right: 120px;
     width: 350px;
     height: fit-content;

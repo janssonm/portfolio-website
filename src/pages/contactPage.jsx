@@ -13,10 +13,6 @@ const ContactPage = React.forwardRef((props, ref) => {
                     <h3><a href="mailto:janssonmatilda01@gmail.com">janssonmatilda01@gmail.com</a></h3>
                 </div>
                 <div className='item contact'>
-                    <h2>Phone</h2>
-                    <h3>070-6047517</h3>
-                </div>
-                <div className='item contact'>
                     <h2>LinkedIn</h2>
                     <h3><a href="https://www.linkedin.com/in/matilda-jansson-23635a23a/">@matildajansson</a></h3>
                 </div>

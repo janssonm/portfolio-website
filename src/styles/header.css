@@ -34,4 +34,9 @@
 
 .sayhi {
     font-size: 12pt;
+    padding: 0;
+}
+
+.city {
+    padding: 0;
 }
