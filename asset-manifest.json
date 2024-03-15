@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.025bb7cf.css",
-    "main.js": "/portfolio-website/static/js/main.d245fcc4.js",
+    "main.css": "/portfolio-website/static/css/main.ed6b177f.css",
+    "main.js": "/portfolio-website/static/js/main.9b8d6bd0.js",
     "static/js/453.ad6eb26e.chunk.js": "/portfolio-website/static/js/453.ad6eb26e.chunk.js",
     "static/media/Dreamers Welcome.png": "/portfolio-website/static/media/Dreamers Welcome.736bbe9f0777ba6c5c5e.png",
     "index.html": "/portfolio-website/index.html",
-    "main.025bb7cf.css.map": "/portfolio-website/static/css/main.025bb7cf.css.map",
-    "main.d245fcc4.js.map": "/portfolio-website/static/js/main.d245fcc4.js.map",
+    "main.ed6b177f.css.map": "/portfolio-website/static/css/main.ed6b177f.css.map",
+    "main.9b8d6bd0.js.map": "/portfolio-website/static/js/main.9b8d6bd0.js.map",
     "453.ad6eb26e.chunk.js.map": "/portfolio-website/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.025bb7cf.css",
-    "static/js/main.d245fcc4.js"
+    "static/css/main.ed6b177f.css",
+    "static/js/main.9b8d6bd0.js"
   ]
 }
