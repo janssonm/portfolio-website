@@ -1,16 +1,15 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 
 const EducationPage = React.forwardRef((props, ref) => {
 
     return(
-        <div className='itemPage' ref={ref}>
+        <div id='eduPage' className='scrollItem itemPage' ref={ref}>
             <h1>Education</h1>
             <div className='items'>
                 <div className='item'>
-                    <h2>Master of Science in Engineering Program,<br/>
-                        Media Technology<br/>
-                        300 credits</h2>
+                    <h2>Master of Science in Engineering,<br/>
+                        Interactive Media Technology</h2>
                     <h3>KTH Royal Institute of Technology</h3>
                     <h4>2020 -</h4>
                 </div>

@@ -1,5 +1,6 @@
 import './styles/App.css';
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
+import { animateScroll as scroll, scroller } from 'react-scroll';
 import Header from './pages/header.jsx';
 import FrontPage from './pages/frontpage.jsx';
 import EducationPage from './pages/educationPage.jsx';
@@ -7,6 +8,7 @@ import ExperiencePage from './pages/experiencePage.jsx';
 import ProjectPage from './pages/projectPage.jsx';
 import OtherPage from './pages/other.jsx';
 import ContactPage from './pages/contactPage.jsx';
+
 
 function App() {
 
@@ -16,30 +18,27 @@ function App() {
   const otherRef = useRef(null);
   const contactRef = useRef(null);
 
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-
-  function scrolldiv5() {
-    if (contactRef && contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
+  // This function works for scroll buttons or links
+  function scrollToSection(ref) {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
     }
   }
 
   return (
     <div className='wholePage'>
       <div className='header'>
-      <Header ref={contactRef} scrolldiv5={scrolldiv5}/>
+      <Header scrollToSection={scrollToSection} contactRef={contactRef} />
       </div>
       <div className='page'>
-        <FrontPage className="frontPage"
-          eduRef={eduRef} 
-          expRef={expRef} 
-          projectRef={projectRef} 
-          otherRef={otherRef} 
-          contactRef={contactRef}
-          scrolldiv5={scrolldiv5}
-          />
+      <FrontPage 
+        scrollToSection={scrollToSection} 
+        eduRef={eduRef} 
+        expRef={expRef} 
+        projectRef={projectRef} 
+        otherRef={otherRef} 
+        contactRef={contactRef} 
+      />
         <EducationPage className="educationPage" ref={eduRef}/>
         <ExperiencePage className="experiencePage" ref={expRef}/>
         <ProjectPage className="projectPage" ref={projectRef}/>
@@ -51,5 +50,5 @@ function App() {
   );
 }
 
-export default App;
+export default App ;
 

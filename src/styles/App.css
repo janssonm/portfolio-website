@@ -1,8 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(../imgs/Dreamers\ Welcome.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden
 }
 
 ::-webkit-scrollbar {
@@ -24,21 +33,37 @@ button {
     background-color: transparent;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
-button:hover {
-    color:#305c8e;
+button::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #222222;
+    transition: all 0.5s;
+}
+
+button:hover::before {
+    width: 100%;
 }
 
 a {
-    color:#305c8e;
+    /* color:#305c8e; */
+    color: #222222;
 }
 
+.wholePage {
+    height: fit-content;
+}
 
 .header{
     width: calc(100vw - 80px);
     height: 50px;
-    padding: 40px 40px 0 40px;
+    margin: 40px 40px 0 40px;
     position: fixed;
     z-index: 1000;
 /*     background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(230,230,230), rgb(230,230,230), rgb(230,230,230), rgb(230,230,230)); */
@@ -46,20 +71,29 @@ a {
 }
 
 .page {
-    width: calc(100vw - 80px);
-    height: fit-content;
-    padding: 0 40px 40px 40px;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 40px 40px 40px;
+    bottom: 0;
     display: grid;
-    grid-template-areas:
-    "frontPage";
-    grid-template-rows:calc(100vh - 140px);
-    top: 140px;
-    position: absolute;
+    grid-template-areas: 
+    "frontPage"
+    "itemPage"; /* Explicitly stack the items */
+    grid-template-rows: auto; /* Make sure the rows adjust to content size */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.scrollItem {
+    scroll-snap-align: start;
 }
 
 .frontPage {
     grid-area: frontPage;
     animation: drop-in2 0.5s ease 200ms;
+    height: 100vh;
+    margin-bottom: 140px;
 }
 
 @keyframes drop-in {
@@ -74,7 +108,9 @@ a {
    }
 
 .itemPage {
-    padding-top: 120px;
+    top: 0;
+    scroll-margin-top: 140px;
+    margin-bottom: 100px;
 }
 
 .items {
@@ -115,7 +151,8 @@ h4 {
 
 
 .footer {
-    padding-top: 160px;
+    height: 60px;
+    padding-bottom: 40px;
 }
 
 @keyframes drop-in2 {

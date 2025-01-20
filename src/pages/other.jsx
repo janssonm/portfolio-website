@@ -1,10 +1,10 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 
 const OtherPage = React.forwardRef((props, ref) => {
 
     return(
-        <div className='itemPage' ref={ref}>
+        <div id='otherPage' className='scrollItem itemPage' ref={ref}>
             <h1>Other</h1>
             <div className='items'>
                 <div className='item'>

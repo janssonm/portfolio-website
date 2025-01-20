@@ -1,9 +1,9 @@
 
-import React, { useRef } from "react";
+import React from "react";
 
 const ProjectPage = React.forwardRef((props, ref) => {
   return (
-    <div className="itemPage" ref={ref}>
+    <div id='projectPage' className="scrollItem itemPage" ref={ref}>
       <h1>Courses, skills & projects</h1>
       <div className="items">
         <div className="item">
@@ -14,11 +14,11 @@ const ProjectPage = React.forwardRef((props, ref) => {
             My project team developed a web application using JavaScript in an
             MVP architecture. React was used as framework and Firebase for the
             database.
-            <br />
+            <br /> ➔
             <a href="https://gits-15.sys.kth.se/cananau/global-history">
               Git link
             </a>
-            <br />
+            <br /> ➔
             <a href="https://matdrox.github.io/global-history/">
               Deployed link
             </a>
