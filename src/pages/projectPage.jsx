@@ -1,39 +1,85 @@
-
 import React from "react";
 
 const ProjectPage = React.forwardRef((props, ref) => {
   return (
-    <div id='projectPage' className="scrollItem itemPage" ref={ref}>
-      <h1>Courses, skills & projects</h1>
+    <div id="projectPage" className="scrollItem itemPage" ref={ref}>
+      <h1>Projects</h1>
       <div className="items">
         <div className="item">
-          <h2>
-            DH2642 Interaction Programming and the Dynamic Web 7.5 credits
-          </h2>
+          <h2>Global History</h2>
+          <h3>Nov. 2023 - Jan. 2024</h3>
           <h4>
-            My project team developed a web application using JavaScript in an
-            MVP architecture. React was used as framework and Firebase for the
-            database.
-            <br /> ➔
-            <a href="https://gits-15.sys.kth.se/cananau/global-history">
-              Git link
+            An interactive website for exploring historic events around the
+            globe
+          </h4>
+          <h4>
+            ➔
+            <a
+              href="https://matdrox.github.io/global-history/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Website
             </a>
-            <br /> ➔
-            <a href="https://matdrox.github.io/global-history/">
-              Deployed link
+            <br />➔
+            <a
+              href="https://github.com/janssonm/global-history"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub link
             </a>
           </h4>
         </div>
         <div className="item">
-          <h2>DD1320 Applied Computer Science 6.0 credits</h2>
-          <h4>In this advanced Python course, data structures
-            and algorithms were the main focus.</h4>
+          <h2>Escape Safari - an AR escape room</h2>
+          <h3>Oct. 2024 - Jan. 2025</h3>
+          <h4>
+            An AR escape room game on the Apple iPad Pro that explores multiple
+            modalities
+          </h4>
+          <h4>
+            ➔
+            <a
+              href="https://youtu.be/_j5ZtOXnWBg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Demo video
+            </a>
+            <br />➔
+            <a href="/DT2140.pdf" download>
+              Download project report
+            </a>
+          </h4>
         </div>
         <div className="item">
-          <h2>DM1595 Program Development for
-            Interactive Media 7.5 credits</h2>
-          <h4>A programming course covering OOP in Python,
-            JavaScript, SQL, SuperCollider and Unity.</h4>
+          <h2>
+            The Impact of Color-Coded Sustainability Infographics on Short-term
+            Memory
+          </h2>
+          <h3>Oct. 2024 - Jan. 2025</h3>
+          <h4>
+            A study that explores the impact of color relationships on
+            short-term memory and its potential to enhance the retention of
+            sustainability-related information.
+          </h4>
+          <h4>
+            ➔
+            <a href="/DM2350 project report PJ4_a.pdf" download>
+              Download project report
+            </a>
+          </h4>
+        </div>
+        <div className="item">
+          <h2>Photography portfolio</h2>
+          <h3>A personal project to display my photography work</h3>
+          <h4>
+            ➔
+            <a href="/fotoportfolio.pdf" download>
+              Download photography portfolio
+            </a>
+          </h4>
         </div>
       </div>
     </div>

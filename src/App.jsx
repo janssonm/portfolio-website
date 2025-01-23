@@ -1,6 +1,5 @@
 import './styles/App.css';
-import React, { useRef, useEffect } from "react";
-import { animateScroll as scroll, scroller } from 'react-scroll';
+import React, { useRef } from "react";
 import Header from './pages/header.jsx';
 import FrontPage from './pages/frontpage.jsx';
 import EducationPage from './pages/educationPage.jsx';
@@ -18,7 +17,6 @@ function App() {
   const otherRef = useRef(null);
   const contactRef = useRef(null);
 
-  // This function works for scroll buttons or links
   function scrollToSection(ref) {
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth" });
