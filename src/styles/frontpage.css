@@ -7,7 +7,8 @@
     "greet greet list";
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-
+    height: calc(100vh - 40px);
+    padding-bottom: 60px;
 }
 
 .listDiv {
@@ -16,9 +17,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    align-self: center;
+    align-self: end;
     margin: 0;
     height: 5.5cm;
+    margin-bottom: 30px;
 
 }
 
@@ -28,7 +30,8 @@
     align-items: center;
     margin: 0;
     height: fit-content;
-    align-self: center;
+    align-self: end;
+    margin-right: 40px;
 
 }
 
@@ -37,4 +40,32 @@
     font-style: normal;
     font-size: 72pt;
     margin: 0;
+}
+
+@media(max-width: 1156px) {
+    .greeting {
+        font-size: 8vw;
+    }
+}
+@media(max-width: 768px) {
+    .frontPage {
+        display: grid;
+        grid-template-areas: 
+        "greet"
+        "list";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .greetDiv {
+        justify-self: start;
+        align-self: flex-end;
+    
+    }
+    .listDiv {
+        justify-self: start;
+        align-self: center;
+    }
+    .greeting {
+        font-size: 3em;
+    }
 }

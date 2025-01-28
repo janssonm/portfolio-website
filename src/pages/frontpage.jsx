@@ -1,4 +1,7 @@
 import '../styles/frontpage.css';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function FrontPage({ eduRef, expRef, projectRef, otherRef, contactRef, scrollToSection }) {
 
@@ -21,7 +24,7 @@ function FrontPage({ eduRef, expRef, projectRef, otherRef, contactRef, scrollToS
                 </button>
 
                 <button onClick={() => scrollToSection(projectRef)}>
-                    03 {"\xa0"} Courses, skills & projects
+                    03 {"\xa0"} Projects
                 </button>
 
                 <button onClick={() => scrollToSection(otherRef)}>

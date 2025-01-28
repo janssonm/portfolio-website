@@ -1,168 +1,260 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  /*   scroll-behavior: smooth; */
 }
 
 body {
-    background-image: url(../imgs/Dreamers\ Welcome.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow: hidden
+  scrollbar-width: thin;
+  scrollbar-color: #222222 #00000000;
+  /*   background-image: url(../imgs/Dreamers\ Welcome.png);
+  background-color: #e7e7e7;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden; */
 }
 
-::-webkit-scrollbar {
-    display: none;
+.background--custom::before {
+  position: relative;
+  overflow-y: hidden;
+}
+.background--custom::before {
+  content: "";
+  background: url("../imgs/grain.png");
+  opacity: 30%;
+  background-size: cover;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  top: 0;
+  left: 0;
 }
 
-h1, h2, h3, h4, p {
-    margin: 0;
-    color: #222222;
-    padding-bottom: 10px;
+canvas#canvas {
+  filter: blur(50px);
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg) scale(2) translateY(0%);
+  --gradient-color-1: #eb3d3d;
+  --gradient-color-2: #c5dce0;
+  --gradient-color-3: #eb3d3d;
+  --gradient-color-4: #c5dce0;
+  --gradient-speed: 0.000002;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  color: #222222;
+  padding-bottom: 10px;
 }
 
 button {
-    font-family: "neue-haas-grotesk-display",'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
-    font-size: 18pt;
-    color: #222222;
-    border: none;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    position: relative;
+  font-family: "neue-haas-grotesk-display", "Helvetica Neue", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    sans-serif;
+  font-size: 18pt;
+  color: #222222;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
 }
 
 button::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #222222;
-    transition: all 0.5s;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #222222;
+  transition: all 0.5s;
 }
 
 button:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
 a {
-    /* color:#305c8e; */
-    color: #222222;
+  /* color:#305c8e; */
+  color: #222222;
+}
+
+.scrollbar-track .scrollbar-thumb {
+  width: 100%; /* Keep the thumb fully contained */
+  background-color: #222222; /* Darker thumb color */
+  border-radius: 4px; /* Rounded edges */
+  transition: background-color 0.3s;
 }
 
 .wholePage {
-    height: fit-content;
+  height: fit-content;
+  z-index: 5;
 }
 
-.header{
-    width: calc(100vw - 80px);
-    height: 50px;
-    margin: 40px 40px 0 40px;
-    position: fixed;
-    z-index: 1000;
-/*     background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(230,230,230), rgb(230,230,230), rgb(230,230,230), rgb(230,230,230)); */
-    animation: drop-in 0.5s ease 200ms backwards;
+.header {
+  width: calc(100vw - 80px);
+  height: 50px;
+  margin: 40px 40px 0 40px;
+  position: fixed;
+  z-index: 1000;
+  /* animation: drop-in 0.5s ease 200ms backwards; */
 }
 
 .page {
-    width: 100vw;
-    height: 100vh;
-    padding: 40px 40px 40px 40px;
-    bottom: 0;
-    display: grid;
-    grid-template-areas: 
+  width: 100vw;
+  height: 100vh;
+  padding: 40px 40px 40px 40px;
+  bottom: 0;
+  display: grid;
+  grid-template-areas:
     "frontPage"
     "itemPage"; /* Explicitly stack the items */
-    grid-template-rows: auto; /* Make sure the rows adjust to content size */
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+  grid-template-rows: auto; /* Make sure the rows adjust to content size */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: transparent;
 }
 
 .scrollItem {
-    scroll-snap-align: start;
+  scroll-snap-align: start;
+  padding-top: 140px;
 }
 
 .frontPage {
-    grid-area: frontPage;
-    animation: drop-in2 0.5s ease 200ms;
-    height: 100vh;
-    margin-bottom: 140px;
+  grid-area: frontPage;
+  /*   animation: drop-in2 0.5s ease 200ms; */
 }
 
-@keyframes drop-in {
-    from {
-     opacity: 0;
-     transform: translateY(-30px);
-    }
-    to {
-     opacity: 1;
-     transform: translate(0px);
-    }
-   }
+/* @keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+} */
 
-.itemPage {
-    top: 0;
-    scroll-margin-top: 140px;
-    margin-bottom: 100px;
-}
+/* .itemPage {
+  padding-bottom: 60px;
+} */
 
 .items {
-    display: flex;
-    columns: 1fr 1fr 1fr;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
 }
 
 .item {
-    padding-bottom: 60px;
-    padding-right: 120px;
-    width: 350px;
-    height: fit-content;
+  padding-bottom: 60px;
+  padding-right: 120px;
+  width: 75%;
+  height: fit-content;
+  overflow-y: visible;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.projText {
+  width: fit-content;
+  padding-right: 40px;
+  flex-shrink: 0;
+} 
+
+.projImg {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  overflow-x: hidden;
+
+}
+
+img .myVideo{
+  width: auto;
+  height: 100%;
 }
 
 h1 {
-    font-size: 20pt;
-    font-weight: 400;
-    padding-bottom: 40px;
+  font-size: 20pt;
+  font-weight: 400;
+  padding-bottom: 40px;
 }
 h2 {
-    font-size: 14pt;
-    font-weight: 400;
-    padding: 10px 0;
+  font-size: 14pt;
+  font-weight: 400;
+  padding: 10px 0;
 }
 
 h3 {
-    font-size: 12pt;
-    font-weight: 400;
-    padding: 10px 0;
+  font-size: 12pt;
+  font-weight: 400;
+  padding: 10px 0;
 }
 
 h4 {
-    font-size: 12pt;
-    font-weight: 400;
-    color: #222222;
+  font-size: 12pt;
+  font-weight: 400;
+  color: #222222;
 }
-
 
 .footer {
-    height: 60px;
-    padding-bottom: 40px;
+  height: fit-content;
+  margin-top: 160px;
 }
 
-@keyframes drop-in2 {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0px);
-    }
-    }
-    
+.scrollToTop {
+  height: 50px;
+  width: 50px;
+  right: 40px;
+  bottom: 40px;
+  position: fixed;
+  transition: "opacity 0.3s";
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 2vw;
+  cursor: pointer;
+  color: black;
+}
+
+/* @keyframes drop-in2 {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+} */
+
+@media (max-width: 768px) {
+  .frontPage {
+    grid-area: frontPage;
+    animation: drop-in2 0.5s ease 200ms;
+    height: calc(100vh - 40px);
+    margin-bottom: 140px;
+  }
+}

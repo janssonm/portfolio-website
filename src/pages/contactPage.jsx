@@ -6,7 +6,7 @@ const ContactPage = React.forwardRef((props, ref) => {
 
     return(
         <div id='contactPage' className='scrollItem itemPage contactPage' ref={ref}>
-            <h1>Contact</h1>
+            <h1>05 {"\xa0"} Contact</h1>
             <div className='items'>
                 <div className='item contact'>
                     <h2>Email</h2>

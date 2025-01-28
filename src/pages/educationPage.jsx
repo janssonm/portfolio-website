@@ -3,12 +3,11 @@ import React from "react";
 const EducationPage = React.forwardRef((props, ref) => {
   return (
     <div id="eduPage" className="scrollItem itemPage" ref={ref}>
-      <h1>Education</h1>
+      <h1>01 {"\xa0"} Education</h1>
       <div className="items">
         <div className="item">
           <h2>
             Master of Science in Engineering,
-            <br />
             Interactive Media Technology
           </h2>
           <h3>KTH Royal Institute of Technology</h3>

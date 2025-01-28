@@ -3,7 +3,7 @@ import React from "react";
 const OtherPage = React.forwardRef((props, ref) => {
   return (
     <div id="otherPage" className="scrollItem itemPage" ref={ref}>
-      <h1>Other</h1>
+      <h1>04 {"\xa0"} Other</h1>
       <div className="items">
         <div className="item">
           <h2>Scholarship</h2>

@@ -6,7 +6,7 @@ function Header({contactRef, scrollToSection }) {
         <div className='headerDiv'>
             <div className='line'></div>
             <div className='headerText1'>
-                <p>Media Technology @ KTH</p>
+                <p>Interactive Media Technology @ KTH</p>
             </div>
             <div className='headerText2'>
                 <p className='city'>Stockholm</p>
