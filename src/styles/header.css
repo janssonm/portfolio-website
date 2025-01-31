@@ -1,42 +1,10 @@
 .headerDiv {
-    grid-area: header;
-    display: grid;
-    grid-template-areas: 
-    "line line line"
-    "text1 . text2";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content auto;
-
-}
-
-.headerDiv p {
-    font-size: 12pt;
-}
-
-.line {
-    grid-area: line;
-    background: #222222;
-    height: 2px;
-    margin-bottom: 10px;
-}
-
-.headerText1 {
-    grid-area: text1;
+    width: 100vw;
     height: fit-content;
-}
-
-.headerText2 {
-    grid-area: text2;
+    padding: 40px;
+    position: fixed;
+    z-index: 1000; 
     display: flex;
-    justify-content: space-between;
-    height: fit-content;
-}
+    justify-content: space-around;
 
-.sayhi {
-    font-size: 12pt;
-    padding: 0;
-}
-
-.city {
-    padding: 0;
 }

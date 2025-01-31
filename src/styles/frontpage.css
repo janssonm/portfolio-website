@@ -1,71 +1,30 @@
-
-
 .frontPage {
-    display: grid;
-    grid-template-areas: 
-    ". . ."
-    "greet greet list";
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: calc(100vh - 40px);
-    padding-bottom: 60px;
-}
-
-.listDiv {
-    grid-area: list;
+    height: 100vh;
+    width: calc(100vw - 80px);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: end;
-    margin: 0;
-    height: 5.5cm;
-    margin-bottom: 30px;
-
-}
-
-.greetDiv {
-    grid-area: greet;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0;
-    height: fit-content;
-    align-self: end;
-    margin-right: 40px;
-
 }
 
 .greeting {
-    font-weight: 600;
-    font-style: normal;
-    font-size: 72pt;
-    margin: 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-@media(max-width: 1156px) {
-    .greeting {
-        font-size: 8vw;
-    }
+#helloText {
+    font-size: 4vw;
+    width: fit-content;
+    font-weight: 600;
+    letter-spacing:-1.5px;
+    padding: 0;
 }
-@media(max-width: 768px) {
-    .frontPage {
-        display: grid;
-        grid-template-areas: 
-        "greet"
-        "list";
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-    }
-    .greetDiv {
-        justify-self: start;
-        align-self: flex-end;
-    
-    }
-    .listDiv {
-        justify-self: start;
-        align-self: center;
-    }
-    .greeting {
-        font-size: 3em;
-    }
+
+#studentText {
+    text-align: center;
+    width: fit-content;
+    font-size: 1.5vw;
+    letter-spacing:-0.5px;
+    padding: 0;
 }

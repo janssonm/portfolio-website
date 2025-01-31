@@ -1,19 +1,22 @@
-import React from 'react';
-import '../styles/header.css';
+import React from "react";
+import "../styles/header.css";
 
-function Header({contactRef, scrollToSection }) {
-    return(
-        <div className='headerDiv'>
-            <div className='line'></div>
-            <div className='headerText1'>
-                <p>Interactive Media Technology @ KTH</p>
-            </div>
-            <div className='headerText2'>
-                <p className='city'>Stockholm</p>
-                <button className='sayhi' onClick={() => scrollToSection(contactRef)}>Say hi</button>
-            </div>
-        
-        </div>
-    );
+function Header({ scrollToSection, frontPageRef, aboutRef, projectRef, contactRef }) {
+  return (
+    <div className="headerDiv">
+      <button onClick={() => scrollToSection(frontPageRef)}>
+        <h2>01 &nbsp; Frontpage</h2>
+      </button>
+      <button onClick={() => scrollToSection(aboutRef)}>
+        <h2>02 &nbsp; About</h2>
+      </button>{" "}
+      <button onClick={() => scrollToSection(projectRef)}>
+        <h2>03 &nbsp; Projects</h2>
+      </button>{" "}
+      <button onClick={() => scrollToSection(contactRef)}>
+        <h2>04 &nbsp; Contact</h2>
+      </button>
+    </div>
+  );
 }
 export default Header;

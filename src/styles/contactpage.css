@@ -1,4 +1,3 @@
-.contactPage {
-    width: calc(100vw - 80px);
-    height: fit-content;
-}
+#contactPage {
+    height: 100vh;
+  }
