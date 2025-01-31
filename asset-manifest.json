@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.13d1e331.css",
-    "main.js": "/portfolio-website/static/js/main.e7f1f94d.js",
+    "main.css": "/portfolio-website/static/css/main.ee14979d.css",
+    "main.js": "/portfolio-website/static/js/main.945ddf24.js",
     "static/js/453.ad6eb26e.chunk.js": "/portfolio-website/static/js/453.ad6eb26e.chunk.js",
-    "static/media/Dreamers Welcome.png": "/portfolio-website/static/media/Dreamers Welcome.736bbe9f0777ba6c5c5e.png",
+    "static/media/grain.png": "/portfolio-website/static/media/grain.af7f450a9a37d3abea6b.png",
+    "static/media/fotoportfolio screen.png": "/portfolio-website/static/media/fotoportfolio screen.1852be0dbf917e030b7b.png",
+    "static/media/portfoliofront.png": "/portfolio-website/static/media/portfoliofront.bd152dd72466db6fc26f.png",
+    "static/media/lightmode1.png": "/portfolio-website/static/media/lightmode1.8b0ced3ad7a8376e5ffc.png",
+    "static/media/colorcoded.png": "/portfolio-website/static/media/colorcoded.bd6e41d75b2cd6273153.png",
+    "static/media/ARimg.png": "/portfolio-website/static/media/ARimg.cec6b39bb1ba5bd45441.png",
     "index.html": "/portfolio-website/index.html",
-    "main.13d1e331.css.map": "/portfolio-website/static/css/main.13d1e331.css.map",
-    "main.e7f1f94d.js.map": "/portfolio-website/static/js/main.e7f1f94d.js.map",
+    "main.ee14979d.css.map": "/portfolio-website/static/css/main.ee14979d.css.map",
+    "main.945ddf24.js.map": "/portfolio-website/static/js/main.945ddf24.js.map",
     "453.ad6eb26e.chunk.js.map": "/portfolio-website/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13d1e331.css",
-    "static/js/main.e7f1f94d.js"
+    "static/css/main.ee14979d.css",
+    "static/js/main.945ddf24.js"
   ]
 }
