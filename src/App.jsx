@@ -8,7 +8,7 @@ import ContactPage from "./pages/contactPage.jsx";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Scrollbar from "smooth-scrollbar";
-import jagPaBerg from "./imgs/jagpaberg-bg-gone.png";
+import jagPaBerg from "./imgs/matildaguitar2.png";
 
 /* global Gradient */
 
@@ -22,7 +22,6 @@ function App() {
   const gradientInitialized = useRef(false);
   const scrollbarRef = useRef(null);
   const scrollbarInstance = useRef(null);
-  const [isFrontPage, setIsFrontPage] = useState(true);
   const [bgOpacity, setBgOpacity] = useState(0);
 
   useEffect(() => {
@@ -49,8 +48,16 @@ function App() {
 
     // Initialize Smooth Scrollbar and store the instance
     scrollbarInstance.current = Scrollbar.init(scrollbarRef.current, {
-      alwaysShowTracks: true,
+      damping: 0.1,
+      renderByPixels: true,
+      continuousScrolling: true,
     });
+
+    scrollbarInstance.current.addListener(({ offset }) => {
+      scrollbarInstance.current.setPosition(0, offset.y);
+    });
+
+    scrollbarInstance.current.track.xAxis.element.style.display = "none";
 
     if (!scrollbarInstance.current) return; // Prevent errors if it's not initialized
 
@@ -74,6 +81,7 @@ function App() {
       }
 
       scrollbarInstance.current.removeListener(handleScroll);
+
     };
   }, []); // This effect runs only once when the component mounts
 
@@ -124,3 +132,4 @@ function App() {
 }
 
 export default App;
+//inga problem
