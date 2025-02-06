@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.8fb1f8bb.css",
-    "main.js": "/portfolio-website/static/js/main.af595f9a.js",
+    "main.css": "/portfolio-website/static/css/main.c492c5dc.css",
+    "main.js": "/portfolio-website/static/js/main.71ff2b85.js",
     "static/js/453.ad6eb26e.chunk.js": "/portfolio-website/static/js/453.ad6eb26e.chunk.js",
     "static/media/grain.png": "/portfolio-website/static/media/grain.af7f450a9a37d3abea6b.png",
     "static/media/02symmetry.png": "/portfolio-website/static/media/02symmetry.1168a467da6b3a4b0ab4.png",
@@ -9,9 +9,9 @@
     "static/media/fotoportfolio screen.png": "/portfolio-website/static/media/fotoportfolio screen.1852be0dbf917e030b7b.png",
     "static/media/03architecture.png": "/portfolio-website/static/media/03architecture.69a6f493abfb5c410edb.png",
     "static/media/portfoliofront.png": "/portfolio-website/static/media/portfoliofront.bd152dd72466db6fc26f.png",
-    "static/media/jagpaberg-bg-gone.png": "/portfolio-website/static/media/jagpaberg-bg-gone.63aa739c83db96defff3.png",
     "static/media/darkmode2.png": "/portfolio-website/static/media/darkmode2.315d469c17c973e99e38.png",
     "static/media/darkmode1.png": "/portfolio-website/static/media/darkmode1.3f49968779c826dfb1af.png",
+    "static/media/matildaguitar2.png": "/portfolio-website/static/media/matildaguitar2.d92ffd1f5b5080331bf4.png",
     "static/media/projects.png": "/portfolio-website/static/media/projects.dee0fbdb83e48e39754d.png",
     "static/media/lightmode1.png": "/portfolio-website/static/media/lightmode1.8b0ced3ad7a8376e5ffc.png",
     "static/media/multimodala2.png": "/portfolio-website/static/media/multimodala2.e43cb79c9d8c05a64fda.png",
@@ -25,12 +25,12 @@
     "static/media/ARimg.png": "/portfolio-website/static/media/ARimg.cec6b39bb1ba5bd45441.png",
     "static/media/projects-2.png": "/portfolio-website/static/media/projects-2.422a95d052b9877a9087.png",
     "index.html": "/portfolio-website/index.html",
-    "main.8fb1f8bb.css.map": "/portfolio-website/static/css/main.8fb1f8bb.css.map",
-    "main.af595f9a.js.map": "/portfolio-website/static/js/main.af595f9a.js.map",
+    "main.c492c5dc.css.map": "/portfolio-website/static/css/main.c492c5dc.css.map",
+    "main.71ff2b85.js.map": "/portfolio-website/static/js/main.71ff2b85.js.map",
     "453.ad6eb26e.chunk.js.map": "/portfolio-website/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fb1f8bb.css",
-    "static/js/main.af595f9a.js"
+    "static/css/main.c492c5dc.css",
+    "static/js/main.71ff2b85.js"
   ]
 }
