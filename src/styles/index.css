@@ -6,6 +6,7 @@ body {
   color: #222222;
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
 }
 
 code {
