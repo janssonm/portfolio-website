@@ -32,9 +32,9 @@ canvas#canvas {
   width: 100%;
   height: 100%;
   transform: rotate(0deg) scale(2) translateY(0%);
-  --gradient-color-1: #FE4B2C;
+  --gradient-color-1: #fe4b2c;
   --gradient-color-2: #aac7cd;
-  --gradient-color-3: #FE4B2C;
+  --gradient-color-3: #fe4b2c;
   --gradient-color-4: #aac7cd;
   --gradient-speed: 0.000002;
 }
@@ -55,6 +55,7 @@ h1 {
 
 h2 {
   font-size: 14pt;
+  padding-top: 10px !important;
 }
 p {
   font-size: 11pt;
@@ -68,9 +69,13 @@ p {
   color: #222222;
   font-weight: 400;
   padding: 5px 0;
+  width: fit-content;
+  height: fit-content;
+  word-wrap: break-word;
 }
 
 button {
+  all: unset;
   font-family: "neue-haas-grotesk-display", "Helvetica Neue", "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     sans-serif;
@@ -79,10 +84,12 @@ button {
   background-color: transparent;
   margin: 0;
   padding: 0;
-  position: relative;
   cursor: pointer;
 }
 
+img {
+  width: 100%;
+}
 a {
   color: #222222;
 }
@@ -94,20 +101,12 @@ a {
 }
 
 .page {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   padding: 0 40px;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-img{
-  width: 100%;
-  /* border-radius: 10px; */
-}
-
-img:hover {
-  cursor: url(../imgs/link-cursor.png), auto;
+  position: relative;
 }
 
 .section {
@@ -121,15 +120,14 @@ img:hover {
 .sectionContent {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: start;
+  justify-content: flex-start;
 }
 
 .contentColumn {
-  width: 50%;
-  padding-right: 40px;
-}
-
-.contentColumn2 {
-  width: 33.33%;
+  width: calc(50% - 10px);
   padding-right: 40px;
 }
 
@@ -138,10 +136,28 @@ img:hover {
   width: 100%;
 }
 
+
 .footer {
-  height: 50px;
+  height: auto;
   position: fixed;
+  width: 100%;
   bottom: 0;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.footerText {
+  padding-bottom: 40px;
+  width: 20%;
+}
+
+.meOnRock {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 75%;
+  height: auto;
 }
 
 .scrollToTop {
@@ -165,5 +181,14 @@ img:hover {
     animation: drop-in2 0.5s ease 200ms;
     height: calc(100vh - 40px);
     margin-bottom: 140px;
+  }
+
+  .sectionContent {
+    flex-direction: column;
+  }
+
+  .contentColumn {
+    width: 100%;
+    padding-right: 0;
   }
 }

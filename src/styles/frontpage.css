@@ -28,3 +28,12 @@
     letter-spacing:-0.5px;
     padding: 0;
 }
+
+@media (max-width: 768px) {
+    #helloText {
+        font-size: 8vw;
+    }
+    #studentText {
+        font-size: 4vw;
+    }
+  }

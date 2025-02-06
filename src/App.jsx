@@ -8,6 +8,7 @@ import ContactPage from "./pages/contactPage.jsx";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Scrollbar from "smooth-scrollbar";
+import jagPaBerg from "./imgs/jagpaberg-bg-gone.png";
 
 /* global Gradient */
 
@@ -53,13 +54,13 @@ function App() {
 
     if (!scrollbarInstance.current) return; // Prevent errors if it's not initialized
 
-  const handleScroll = ({ offset }) => {
-    const frontPageHeight = frontPageRef.current.offsetHeight;
-    const newOpacity = Math.min(offset.y / frontPageHeight, 1);
-    setBgOpacity(newOpacity);
-  };
+    const handleScroll = ({ offset }) => {
+      const frontPageHeight = frontPageRef.current.offsetHeight;
+      const newOpacity = Math.min(offset.y / frontPageHeight, 1);
+      setBgOpacity(newOpacity);
+    };
 
-  scrollbarInstance.current.addListener(handleScroll);
+    scrollbarInstance.current.addListener(handleScroll);
     // Cleanup on unmount
     return () => {
       if (existingScript) {
@@ -91,30 +92,33 @@ function App() {
 
   return (
     <div>
-        <div className="background--custom" >
-          <canvas id="canvas" />
-        </div>
+      <div className="background--custom">
+        <canvas id="canvas" />
+      </div>
 
-        <div className="lightBg" style={{ opacity: bgOpacity }}></div>
+      <div className="lightBg" style={{ opacity: bgOpacity }}></div>
 
-        <div className="header">
-          <Header               
-            scrollToSection={scrollToSection}
-            frontPageRef={frontPageRef}
-            aboutRef={aboutRef}
-            projectRef={projectRef}
-            contactRef={contactRef} />
-        </div>
+      <div className="header">
+        <Header
+          scrollToSection={scrollToSection}
+          frontPageRef={frontPageRef}
+          aboutRef={aboutRef}
+          projectRef={projectRef}
+          contactRef={contactRef}
+        />
+      </div>
 
-        <div ref={scrollbarRef} className="page">
-          <FrontPage ref={frontPageRef}/>
-          <AboutPage ref={aboutRef} />
-          <ProjectPage ref={projectRef} />
-          <ContactPage ref={contactRef} />
-          <div className="footer">
-            <p>Designed and built by Matilda Jansson</p>
-            </div>
+      <div ref={scrollbarRef} className="page">
+        <FrontPage ref={frontPageRef} />
+        <AboutPage ref={aboutRef} />
+        <ProjectPage ref={projectRef} scrollToSection={scrollToSection} />
+        <ContactPage ref={contactRef} />
+
+        <div className="footer">
+          <p className="footerText">Designed and built by Matilda Jansson</p>
+          <img src={jagPaBerg} alt="Me on a big rock" className="meOnRock" />
         </div>
+      </div>
     </div>
   );
 }

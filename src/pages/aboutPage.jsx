@@ -39,10 +39,16 @@ const EducationPage = React.forwardRef((props, ref) => {
             <p>Internship, fullstack</p>
             <p>Jan. 2024 - May 2024</p>
             <p>
-              Internship as part of the course DM1998 at KTH during spring 2024.
-              I developed web applications using mainly JavaScript with Vue.js
-              as framework for the front-end and Ruby using Ruby on Rails as
-              framework for the back-end. <br />
+              During my internship, I contributed to the development of web
+              applications in an agile environment. Collaborating with a team, I
+              worked on both front-end and back-end tasks, building features and
+              enhancing user interfaces. I gained hands-on experience in
+              delivering high-quality web solutions while adhering to best
+              development practices.
+            </p>
+            <p>
+              Tools and skills: agile software development, back-end development,
+              collaboration, front-end development, Ruby on Rails, Vue
             </p>
             <p>
               ➔
